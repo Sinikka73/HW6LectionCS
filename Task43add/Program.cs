@@ -3,6 +3,13 @@
 //значения b1, k1, b2 и k2 задаются пользователем.
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
+double getIntersectionPointCoordinates(double b1, double k1, double b2, double k2)
+{    
+    double coordX = (b2 - b1) / (k1 - k2);
+    return coordX; 
+}
+
+
 Console.Write("Введите значение b1: ");
 double userB1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k1: ");
@@ -18,7 +25,7 @@ if((userK1 - userK2) == 0)
     }
     else
     {
-        double coordX = (userB2 - userB1) / (userK1 - userK2);
+        double coordX = getIntersectionPointCoordinates(userB1, userK1, userB2, userK2);
         double coordY = userK1 * coordX + userB1;
-        Console.WriteLine($"Точка пересечения двух прямых имеет координаты Х = {Math.Round(coordX, 2)} и Y = {Math.Round(coordY, 2)}");
+        Console.WriteLine($"Точка пересечения с координатами Х = {coordX} и Y = {coordY}");
     }
