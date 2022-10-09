@@ -3,20 +3,6 @@
 //значения b1, k1, b2 и k2 задаются пользователем.
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-/*double getIntersectionPointCoordinates(double b1, double k1, double b2, double k2)
-{
-    if((k1 - k2) == 0)
-    {
-        Console.Write("Задача не имеет решения");
-    }
-    else
-    {
-        double coordX = (b2 - b1) / (k1 - k2);
-        double coordY = k1 * coordX + b1;
-    }
-}
-*/
-
 Console.Write("Введите значение b1: ");
 double userB1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k1: ");
