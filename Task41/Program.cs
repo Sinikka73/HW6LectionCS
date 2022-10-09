@@ -5,6 +5,7 @@
 
 int[] getUserArray(int length)
 {
+    Console.WriteLine();
     int[] array = new int[length];
     for (int i = 0; i < length; i++)
     {
@@ -45,9 +46,9 @@ int numberOfPositiveElements(int[] inputArray)
 }
 
 Console.WriteLine();
-Console.Write("Задайте количество вводимых чисел: ");
+Console.Write("Задайте количество элементов массива: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
 int[] currenArray = getUserArray(userNumber);
 printArray(currenArray);
 int result = numberOfPositiveElements(currenArray);
-Console.Write($"количество положительных элементов {result}");
+Console.Write($"количество положительных элементов: {result}");
